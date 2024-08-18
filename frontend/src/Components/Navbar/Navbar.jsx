@@ -40,9 +40,12 @@ const Navbar = () => {
             <StyledToolbar>
                 <Box flex={{ xs: 25, md: 1 }}>
                     <Typography
-                        variant="h4"
+                        variant="h3"
                         color={"tomato"}
-                        sx={{ fontFamily: "Dancing Script, cursive" }}
+                        sx={{
+                            fontFamily: "Dancing Script, cursive",
+                            textAlign: { xs: "center", md: "left" },
+                        }}
                     >
                         Recipe Blog
                     </Typography>
@@ -52,7 +55,11 @@ const Navbar = () => {
                         return (
                             <Typography
                                 variant="body2"
-                                sx={{ fontFamily: "Montserrat, sans-serif" }}
+                                sx={{
+                                    fontFamily: "Montserrat, sans-serif",
+                                    fontSize: "18px",
+                                    fontWeight: "bold",
+                                }}
                             >
                                 {item.Name}
                             </Typography>
@@ -63,11 +70,16 @@ const Navbar = () => {
                     <TextField
                         sx={{
                             display: { xs: "none", md: "flex" },
-                            fontFamily: "Montserrat, sans-serif",
                         }}
                         color="warning"
                         label="Search Here!"
                         variant="standard"
+                        InputLabelProps={{
+                            sx: {
+                                fontWeight: "bold",
+                                fontFamily: "Montserrat, sans-serif",
+                            },
+                        }}
                     />
                     <MenuIcon
                         sx={{
@@ -84,7 +96,12 @@ const Navbar = () => {
                 onClose={() => setOpenMenu(!openMenu)}
             >
                 <List>
-                    <ListItem sx={{ fontFamily: "Montserrat, sans-serif" }}>
+                    <ListItem
+                        sx={{
+                            fontFamily: "Montserrat, sans-serif",
+                            fontWeight: "bold",
+                        }}
+                    >
                         {MenuItems.map((item) => {
                             return <ListItemButton>{item.Name}</ListItemButton>;
                         })}
@@ -93,11 +110,17 @@ const Navbar = () => {
                 <TextField
                     sx={{
                         display: { xs: "flex", md: "none" },
-                        fontFamily: "Montserrat, sans-serif",
+                        margin: "10px",
                     }}
                     color="warning"
                     label="Search Here!"
                     variant="outlined"
+                    InputLabelProps={{
+                        sx: {
+                            fontWeight: "bold",
+                            fontFamily: "Montserrat, sans-serif",
+                        },
+                    }}
                 />
             </Drawer>
         </AppBar>
