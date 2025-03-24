@@ -8,6 +8,9 @@ class category(models.Model):
     # CharField is used for text-based fields of limited length.
     name = models.CharField(max_length=255)
 
+    class Meta:
+        verbose_name_plural = "Categories"  # This changes the plural name of the model in the admin panel from "Categorys" to "Categories".
+
     # __str__ method defines how the object will be represented as a string, here we're using the name of the category
     def __str__(self):
         return self.name
