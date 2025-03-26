@@ -10,7 +10,7 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Main />} />
-                <Route path="/details" element={<Details />} />
+                <Route path="/details/:slug" element={<Details />} />
             </Routes>
             <Footer />
         </BrowserRouter>

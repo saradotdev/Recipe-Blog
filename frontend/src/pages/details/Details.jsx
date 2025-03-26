@@ -8,10 +8,33 @@ import {
     ListItemText,
 } from "@mui/material";
 import Category from "../../components/category/Category";
-import burger from "../../assets/burger1.jpg";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const Details = () => {
+    const [blogDetails, setBlogDetails] = useState([]);
+    const [steps, setSteps] = useState("");
+
+    let { slug } = useParams();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(
+                    `${process.env.REACT_APP_API_URL}/api/blogs/${slug}`,
+                );
+                setBlogDetails(response.data);
+                setSteps(response.data.content);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <Container>
             <Category />
@@ -19,17 +42,19 @@ const Details = () => {
                 <CardMedia
                     sx={{ height: "500px", width: "500px" }}
                     component="img"
-                    image={burger}
+                    image={blogDetails.image}
                     alt="burger"
                 />
             </Box>
             <List>
-                <ListItemButton>
-                    <ListItemIcon>
-                        <DoubleArrowIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Meat" />
-                </ListItemButton>
+                {steps.split(".").map((step) => (
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <DoubleArrowIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={step} />
+                    </ListItemButton>
+                ))}
             </List>
         </Container>
     );

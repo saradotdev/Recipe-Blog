@@ -7,6 +7,7 @@ from django.db import models
 class category(models.Model):
     # CharField is used for text-based fields of limited length.
     name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to="images", null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Categories"  # This changes the plural name of the model in the admin panel from "Categorys" to "Categories".

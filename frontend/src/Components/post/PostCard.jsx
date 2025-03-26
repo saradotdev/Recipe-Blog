@@ -8,12 +8,11 @@ import {
     Link,
     Typography,
 } from "@mui/material";
-import burger from "../../assets/burger1.jpg";
 
-const PostCard = () => {
+const PostCard = ({ title, excerpt, image, blogHref }) => {
     return (
         <Box mt={3}>
-            <Link href="/details" sx={{ textDecoration: "none" }}>
+            <Link href={blogHref} sx={{ textDecoration: "none" }}>
                 <Card sx={{ borderRadius: "10px", margin: "20px" }}>
                     <Box
                         sx={{
@@ -24,8 +23,8 @@ const PostCard = () => {
                         <CardMedia
                             component={"img"}
                             height="300px"
-                            image={burger}
-                            alt="burger image"
+                            image={image}
+                            alt={title}
                             sx={{
                                 width: "400px",
                                 cursor: "pointer",
@@ -37,7 +36,7 @@ const PostCard = () => {
                                 },
                             }}
                         />
-                        <CardContent>
+                        <CardContent sx={{ width: "100%" }}>
                             <Typography
                                 gutterBottom
                                 variant="h4"
@@ -47,7 +46,7 @@ const PostCard = () => {
                                     fontWeight: 500,
                                 }}
                             >
-                                Yummy Burger
+                                {title}
                             </Typography>
                             <Typography
                                 variant="h5"
@@ -55,11 +54,18 @@ const PostCard = () => {
                                 sx={{
                                     fontFamily: "Montserrat, sans-serif",
                                     fontWeight: 500,
+                                    textAlign: "center",
                                 }}
                             >
-                                This is a burger
+                                {excerpt}
                             </Typography>
-                            <CardActions>
+                            <CardActions
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "space-evenly",
+                                    width: "100%",
+                                }}
+                            >
                                 <Button
                                     sx={{
                                         color: "tomato",

@@ -12,6 +12,8 @@ import {
     ListItemButton,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
+import SearchPost from "../search/SearchPost";
 
 const Navbar = () => {
     const StyledToolbar = styled(Toolbar)({
@@ -42,14 +44,18 @@ const Navbar = () => {
                     <Typography
                         variant="h3"
                         color={"tomato"}
+                        component={Link}
+                        to="/"
                         sx={{
                             fontFamily: "Dancing Script, cursive",
                             textAlign: { xs: "center", md: "left" },
+                            textDecoration: "none",
                         }}
                     >
                         Recipe Blog
                     </Typography>
                 </Box>
+
                 <MenuBox flex={1} sx={{ display: { xs: "none", md: "flex" } }}>
                     {MenuItems.map((item) => {
                         return (
@@ -67,20 +73,7 @@ const Navbar = () => {
                     })}
                 </MenuBox>
                 <Box flex={1}>
-                    <TextField
-                        sx={{
-                            display: { xs: "none", md: "flex" },
-                        }}
-                        color="warning"
-                        label="Search Here!"
-                        variant="standard"
-                        InputLabelProps={{
-                            sx: {
-                                fontWeight: "bold",
-                                fontFamily: "Montserrat, sans-serif",
-                            },
-                        }}
-                    />
+                    <SearchPost />
                     <MenuIcon
                         sx={{
                             display: { xs: "flex", md: "none" },
