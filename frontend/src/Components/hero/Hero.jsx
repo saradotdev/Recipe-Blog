@@ -1,5 +1,8 @@
 import { Container, Grid, Box, Typography, styled } from "@mui/material";
-import burger from "../../assets/burger1.jpg";
+import burger from "../../assets/burger.jpg";
+import pizza from "../../assets/pizza.jpg";
+import breakfast from "../../assets/breakfast.jpg";
+import drinks from "../../assets/drinks.jpg";
 import Category from "../../components/category/Category";
 
 const Hero = () => {
@@ -58,23 +61,23 @@ const Hero = () => {
                     </StyledCard>
                 </Grid>
                 <Grid item md={3} xs={6}>
-                    <StyledCard sx={{ backgroundImage: `url(${burger})` }}>
+                    <StyledCard sx={{ backgroundImage: `url(${drinks})` }}>
                         <StyledWrapper>
-                            <StyledTypography>Burger</StyledTypography>
+                            <StyledTypography>Drinks</StyledTypography>
                         </StyledWrapper>
                     </StyledCard>
                 </Grid>
                 <Grid item md={3} xs={6}>
-                    <StyledCard sx={{ backgroundImage: `url(${burger})` }}>
+                    <StyledCard sx={{ backgroundImage: `url(${pizza})` }}>
                         <StyledWrapper>
-                            <StyledTypography>Burger</StyledTypography>
+                            <StyledTypography>Pizza</StyledTypography>
                         </StyledWrapper>
                     </StyledCard>
                 </Grid>
                 <Grid item md={3} xs={6}>
-                    <StyledCard sx={{ backgroundImage: `url(${burger})` }}>
+                    <StyledCard sx={{ backgroundImage: `url(${breakfast})` }}>
                         <StyledWrapper>
-                            <StyledTypography>Burger</StyledTypography>
+                            <StyledTypography>Breakfast</StyledTypography>
                         </StyledWrapper>
                     </StyledCard>
                 </Grid>

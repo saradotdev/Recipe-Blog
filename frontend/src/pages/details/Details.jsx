@@ -6,8 +6,8 @@ import {
     ListItemButton,
     ListItemIcon,
     ListItemText,
+    Typography,
 } from "@mui/material";
-import Category from "../../components/category/Category";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -37,13 +37,23 @@ const Details = () => {
 
     return (
         <Container>
-            <Category />
+            <Typography
+                variant="h4"
+                align="center"
+                mt={3}
+                sx={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontWeight: 600,
+                }}
+            >
+                {blogDetails.title}
+            </Typography>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <CardMedia
                     sx={{ height: "500px", width: "500px" }}
                     component="img"
                     image={blogDetails.image}
-                    alt="burger"
+                    alt={blogDetails.title}
                 />
             </Box>
             <List>
