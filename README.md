@@ -68,7 +68,7 @@ Frontend will be live at: **http://localhost:3000/**
 ---
 
 ## 🎨 UI Preview
-![Recipe Blog UI](https://via.placeholder.com/1200x600)  
+![Recipe Blog UI](https://recipe-blog-react.vercel.app/)  
 
 ---
 
