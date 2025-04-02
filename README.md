@@ -34,7 +34,7 @@ cd Recipe-Blog
 ```bash
 cd backend
 python -m venv env
-source env\Scripts\activate  # On Windows use 'env\Scripts\activate'
+source env\Scripts\activate
 pip install -r requirements.txt
 ```
 
