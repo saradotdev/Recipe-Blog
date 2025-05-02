@@ -24,7 +24,7 @@ A full-stack recipe blog application built with **React (frontend)**, **Django (
 ### 🔍 Search Results
 ![Search Results](./screenshots/search.png)
 
-🌐 **Live Site:** [Recipe Blog UI](https://recipe-blog-react.vercel.app/)  
+🌐 **Live Site:** [https://recipe-blog-react.vercel.app/](https://recipe-blog-react.vercel.app/) 
 
 ## 🏗️ Tech Stack
 ### **Frontend**
