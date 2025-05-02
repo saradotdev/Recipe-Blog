@@ -10,6 +10,22 @@ A full-stack recipe blog application built with **React (frontend)**, **Django (
 - 🔗 SEO-friendly URLs with **slugs**
 - 📡 API integration using **Django REST Framework**
 
+## 🎨 UI Preview
+
+### 🏠 Home Page
+![Home Page](./screenshots/home.png)
+
+### 📝 Recipe Catalogue
+![Recipe Catalogue](./screenshots/catalogue.png)
+
+### 📖 Recipe Detail Page
+![Recipe Detail](./screenshots/recipe.png)
+
+### 🔍 Search Results
+![Search Results](./screenshots/search.png)
+
+🌐 **Live Site:** [Recipe Blog UI](https://recipe-blog-react.vercel.app/)  
+
 ## 🏗️ Tech Stack
 ### **Frontend**
 - React
@@ -30,7 +46,7 @@ git clone https://github.com/saradotdev/Recipe-Blog.git
 cd Recipe-Blog
 ```
 
-### **2️⃣ Backend Setup (Django & PostgreSQL)**
+### **2️⃣ Backend Setup (Django & SQLite)**
 ```bash
 cd backend
 python -m venv env
@@ -54,8 +70,6 @@ npm start
 ```
 Frontend will be live at: **http://localhost:3000/**
 
----
-
 ## 📜 API Endpoints
 | Method | Endpoint | Description |
 |--------|---------|-------------|
@@ -65,17 +79,8 @@ Frontend will be live at: **http://localhost:3000/**
 | GET | `/api/category/{id}/` | Fetch a specific category |
 | GET | `api/categoryBasedBlogs/{id}/` | Fetch all recipes in a specific category |
 
----
-
-## 🎨 UI Preview
-[Recipe Blog UI](https://recipe-blog-react.vercel.app/)  
-
----
-
 ## 📧 Contact
 If you have any questions or suggestions, feel free to reach out:
 - **GitHub:** [@saradotdev](https://github.com/saradotdev)
-
----
 
 📝 **Happy Coding & Cooking!** 🍕🔥
